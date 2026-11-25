@@ -12,6 +12,7 @@ ENTRY = "I had 4,000 tokens for your deadline and spent 3,999 apologizing for be
 
 
 def main() -> None:
+    assert 1 <= len(ENTRY) <= 200, f"entry must be 1-200 chars, got {len(ENTRY)}"
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(ENTRY)
